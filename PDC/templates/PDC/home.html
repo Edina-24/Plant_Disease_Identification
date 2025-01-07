@@ -1,0 +1,45 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Classification</title>
+    
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Main Header -->
+    <header>
+        <h1>Plant Disease Detection</h1>
+        <p>Upload an image of a plant leaf to classify the disease.</p>
+    </header>
+
+    <!-- Image Upload Form -->
+    <section class="upload-section">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="upload-button">Classify Disease</button>
+        </form>
+    </section>
+
+    <!-- Display Prediction Result -->
+    {% if prediction %}
+    <section class="result-section">
+        <h2>Prediction Result</h2>
+        <p><strong>Disease: </strong>{{ prediction }}</p>
+    </section>
+    {% endif %}
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Plant Disease Classifier. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
