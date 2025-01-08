@@ -25,7 +25,12 @@ SECRET_KEY = "django-insecure-@$wr+2^8^=9!x%^2suj6=!_m#($pggf#kb_#j86a8ub0jonej1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'plant-disease-identification-3.onrender.com',
+    '127.0.0.1',
+    'localhost',
+]
+
 
 
 # Application definition
