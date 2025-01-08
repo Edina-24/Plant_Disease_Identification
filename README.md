@@ -29,3 +29,29 @@ Ensure you have the following installed:
    ```bash
    git clone https://github.com/Edina-24/Plant_Disease_Identification.git
    cd Plant_Disease_Identification
+
+2. **Create a Virtual Environment**
+   Set up an isolated Python environment to manage dependencies:
+   ```bash
+   python -m venv venv 
+   source venv/bin/activate  # For macOS/Linux 
+   venv\Scripts\activate     # For Windows
+
+3. **Install Required Libraries**
+   Use pip to install dependencies from the requirements.txt file:
+   ```bash
+   pip install -r requirements.txt
+   
+4. **Run Database Migrations**
+   Prepare the database by applying migrations:
+   ```bash
+   python manage.py makemigrations 
+   python manage.py migrate
+5. **Start the Development Server**
+   Launch the web application:
+   ```bash
+   python manage.py runserver
+6. **Access the Application**
+   Open your browser and navigate to:
+   ```bash
+   http://127.0.0.1:8000
