@@ -8,6 +8,7 @@ flatbuffers==24.12.23
 gast==0.6.0
 google-pasta==0.2.0
 grpcio==1.68.1
+gunicorn==20.1.0
 h5py==3.12.1
 idna==3.10
 keras==3.7.0
